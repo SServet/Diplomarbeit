@@ -179,3 +179,5 @@ pip-log.txt
 *.pdf
 *.fls
 *.fdb_latexmk
+*.run.xml
+*.synctex.gz
