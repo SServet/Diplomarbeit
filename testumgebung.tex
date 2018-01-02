@@ -1,0 +1,45 @@
+\chapter{Aufbau der Testumgebung}
+\label{chap: Testumgebung}
+
+\section{Virtuell oder Pysisch?}
+\label{sec: VirtuellReal}
+
+Am Anfang wurde diskutiert ob die Testumgebung (in diesem Fall ist die Testumgebung das Netzwerk wo wir das Monitoring durchführen werden) 
+virtuell oder pysisch sein soll. Nach einem kurzen Meinungsaustausch aller Beteiligten wurde es entschieden dass beide Varianten verwendet werden.
+ Der Grund dafür war dass wir nicht zu jedem Zeitpunkt Zugang zu der pysischenn Testumgebung hätten, aber die virtuelle Umgebung alleine nicht ausreichen 
+ würde da man zum Beispiel keinen Netzwerkdrucker direkt in ein virtuelles Netzwerk integrieren kann.
+ Es wurde mit dem Auftraggeber ausgemacht dass wir uns selber um das virtuelle Netzwerk kümmern und dass wir die pysische Umgebung von 
+ ihm zur Verfügung gestellt bekommen.
+
+
+ \section{Möglichkeiten zur Virtualisierung}
+\label{sec: Verglichene Virtualiesierungsplattformen}
+
+ Gleich am Anfang der Arbeit wurden die vier bekanntesten Virtualiesierungsplattformen vergliechen. 
+ Die Plattformen die vergliechen wurden sind:
+
+\begin{itemize}
+         \item Virtualbox
+         \item VMware Workstation Player
+         \item VMware Workstation Pro
+         \item Hyper-V
+\end{itemize}
+
+ \section{Gegenüberstellung der Virtualisierungsmöglichkeiten}
+\label{sec: Gegenüberstellung der Virtualisierungsmöglichkeiten}
+
+\textbf{Virtualbox:} Die Open-Source-Software ist durch ihre umfangreiche Ausstattung sowie ihrer 
+guten Bedienerführung eines der meisten benutzten Tools zur Virtualisierung. Virtualbox unterstützt 32- 
+und 64-Bit-Maschinen, die zwei gängingsten USB Standards 2.0 und 3.0, sowie USB-Laufwerke die man als 
+virtuellen Datenspeicher einbinden kann. Mit dem letzten Update kam auch ein bilddirektionales Drag&Drop 
+für die Gastsysteme. Unter Virtualbox können folgende virtuelle Maschinen mit der Hilfe des Assistenten 
+angelegt werden:
+\begin{itemize}
+        \item Windows 3.1 - 10
+        \item Linux Distributionen ab dem Kernel 2.4
+        \item MAC OS X
+\end{itemize} 
+
+
+\textbf{VMware Workstation Player:} 
+ 
