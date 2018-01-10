@@ -31,14 +31,70 @@ virtuell oder pysisch sein soll. Nach einem kurzen Meinungsaustausch aller Betei
 \textbf{Virtualbox:} Die Open-Source-Software ist durch ihre umfangreiche Ausstattung sowie ihrer 
 guten Bedienerführung eines der meisten benutzten Tools zur Virtualisierung. Virtualbox unterstützt 32- 
 und 64-Bit-Maschinen, die zwei gängingsten USB Standards 2.0 und 3.0, sowie USB-Laufwerke die man als 
-virtuellen Datenspeicher einbinden kann. Mit dem letzten Update kam auch ein bilddirektionales Drag\&Drop 
-für die Gastsysteme. Unter Virtualbox können folgende virtuelle Maschinen mit der Hilfe des Assistenten 
-angelegt werden:
+virtuellen Datenspeicher einbinden kann, sowie das Erstellen von Snapshots (dienen zur Zustandsspeicherung eines virtuellen PCs).
+Mit dem letzten Update kam auch ein bilddirektionales Drag\&Drop für die Gastsysteme. Unter Virtualbox können folgende virtuelle Maschinen 
+mit der Hilfe des Assistenten angelegt werden:
 \begin{itemize}
         \item Windows 3.1 - 10
         \item Linux Distributionen ab dem Kernel 2.4
         \item MAC OS X
 \end{itemize} 
 
+\noindent
+\newline
+\textbf{VMware Workstation Player:} Der Workstation Player ist eine kostenlose Version der Virtualisierungssoftware
+von VMware. Vom Funktionumfang her liegt der Player hinter Virtualbox und kann fertige Maschinen öffnen sowie neue installieren.
+Es werden fast alle Windows-Versionen sowie Linux-Variante untersützt. Der größte Nachteil vom Player ist dass hier auf 
+Snapshots, sowie auf Verwaltungs- und Fernsteuerungsfunktionen verzichtet wurden. Die Schnellinstallationsmethode zum Anlegen 
+virtueller Maschinen erweist sich als praktisch, da der Player die ausgewählte Installationsquelle analysiert, erkennt meist das 
+verwendete Betriebssystem und übernimmt die Eingabe der Voreinstellungen wie dem Benutzernamen.
 
- 
+\noindent
+\newline
+\textbf{VMware Workstation Pro: } Die Workstation Pro ist die einzige kostenpflichtige Virtualiesierungsplattform übertrifft aber 
+alle anderen Plattformen in Ausstattung, Hardware-Unterstützung, Zwischenspeicher von Snapshots, dem Kopieren und Klonen von 
+virtuellen Maschinen sowie der Netzwerkkonfiguration. Ein besonderes Feature von der Pro Version ist der Snapshot-Manager, dieser
+kann die Zwischenstände einfrieren, verschachteln und später zu einem gewünschten Zustand zurückkehren. Die Workstation Pro lässt 
+die virtuellen Maschinen mit mehreren Nutzern teilen und gemeinsam nutzen. 
+
+\noindent
+\newline
+\textbf{Hyper-V:} Hyper-V ist eine Virtualiesierungsplattform von Microsoft die seit Windows 8.1 ein Bestandteil von Windows ist 
+aber nur in der 64-Bit-Version. Dieses System muss nicht wie die anderen Softwares explizit heruntergeladen werden, sondern direkt
+über die Systemsteuerung von Windows aktiviert und installiert werden. Mittels Hyper-V kann man nur die Windows Versionen ab XP, die
+Linux Distributionen Suse Linux Enterprise Server, Red Hat Enterprise Linux und CentOS virtualisieren, welches eine große Einschränkung 
+der Auswahl ist im Vergleich zu den anderen Virtualiesierungsplattformen. Ein Vorteil vom Hyper-V ist die dynamische 
+Arbeitsspeicherverwaltung dieso sorgt dafür dass beim Start einer virtuellen Maschine nur so viel vom echten RAM beansprucht wird wie 
+die Maschine es braucht somit können mehrere Maschinen parallel laufen ohne dass es zu spürbaren Leistungseinbrüchen kommt. 
+
+\section{Entscheidung}
+\label{Entscheidung}
+
+\noindent
+\newline
+Damit wir die für uns am besten geeignete Virtualiesierungsplattform auswählen haben 
+wir vier Kriterien festegeleft die erfüllt werden müssen. Diese vier Kriterien lauten:
+\begin{itemize}
+        \item Kostenfrei
+        \item Snapshots \newline
+                Aufgrund der Gefahr dass beim Konfigurieren der Server nicht behebbare Fehler auftauchen
+                können muss es mittels Snapshots eine stablile Version der Server gesichert werden können. 
+        \item Ubuntu
+        \item Windows 10
+\end{itemize}
+
+\begin{table}[h]
+\centering
+\caption{}
+\begin{tabular}{ccccc}
+\hline
+&  $Kostenfrei$ & $Snapshots$ & $Ubuntu$ & $Windows 10$ \\ \hline
+Virtualbox& \checkmark & \checkmark & \checkmark &  \checkmark \\
+VMware Workstation Player&  \checkmark & X & \checkmark & \checkmark  \\
+VMware Workstation Pro& X  & \checkmark & \checkmark & \checkmark \\ 
+Hyper-V&  \checkmark & \checkmark & X & \checkmark \\ \hline
+\end{tabular}
+\end{table}
+
+\noindent
+\newline
