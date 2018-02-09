@@ -7,10 +7,20 @@
 % die folgende Zeile einkommentieren für Arial-Ähnliche Schriftart
 %\renewcommand{\familydefault}{\sfdefault}
 
+\usepackage{graphicx}       % Zum Einbinden von Bildern
 \graphicspath{{images/}}    % wo liegen die Bilder?
+\usepackage{caption}                %Bildunterschrift
+\captionsetup{justification=raggedright,singlelinecheck=false}
+
+\setcounter{secnumdepth}{3} % Subsubsection wird nun auch nummeriert
+
+
+\usepackage{scrextend}      % Ermöglicht das Verwenden von labeling
+
 \usepackage[paper=a4paper,margin=3cm]{geometry}
 \usepackage{csquotes}       % Wegen Fehlermeldung 'babel/polyglossia' detected
                             %  but 'csquotes' missing ..
+                            
 \makeglossaries
 %\include{glossary}
 \loadglsentries{glossary}
